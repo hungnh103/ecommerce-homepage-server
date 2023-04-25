@@ -1,0 +1,11 @@
+{
+  "name": "ecommerce-homepage-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "hungnh",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "json-server": "^0.17.3"
+  }
+}
