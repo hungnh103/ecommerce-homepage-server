@@ -11,7 +11,7 @@ server.use(
   })
 );
 server.use((_req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*')
+  res.header('Access-Control-Allow-Origin', 'https://ecommerce-homepage.vercel.app/')
   res.header('Access-Control-Allow-Headers', '*')
   next()
 })
