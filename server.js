@@ -10,6 +10,11 @@ server.use(
     "/api/*": "/$1",
   })
 );
+server.use((_req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*')
+  res.header('Access-Control-Allow-Headers', '*')
+  next()
+})
 server.use(router);
 
 server.listen(3000, () => {
