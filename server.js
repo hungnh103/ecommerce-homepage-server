@@ -1,6 +1,8 @@
 const jsonServer = require("json-server");
+const cors = require('cors'); 
 
 const server = jsonServer.create();
+server.use(cors({credentials: true, origin: 'https://ecommerce-homepage.vercel.app/'}));
 server.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
   next();
