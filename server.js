@@ -1,8 +1,10 @@
 const jsonServer = require("json-server");
-const cors = require('cors');
 
 const server = jsonServer.create();
-server.use(cors());
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
+});
 const router = jsonServer.router("api/db.json");
 
 const middlewares = jsonServer.defaults();
